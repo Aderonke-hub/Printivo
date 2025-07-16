@@ -1,0 +1,466 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRINTIVO</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .nav1 {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-evenly;
+            position: sticky;
+            top: 0;
+            z-index: 80;
+            height: 100px;
+        }
+
+        .nav1 ul {
+            text-decoration: none;
+            list-style: none;
+
+        }
+
+        .nav1 li {
+            display: inline-block;
+            margin-top: 25px;
+            color: black;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+        .nav1 img{
+            width: 200px;
+        }
+        
+        .btn1{
+            background-color: transparent;
+            color: red;
+            border: none;
+            font: 30px;
+            /* margin-left: 400px; */
+        }
+        .sections{
+         padding: 0px 0px;
+           background-color:rgb(209, 202, 194) ;
+           display: flex;
+           /* height: 400px; */
+           /* grid-template-columns: 1fr 1fr ; */
+
+        }
+        .sect{
+            display: block;
+            margin-left: 200px;
+            margin-top: 100px;
+            
+        }
+        .sect h1{
+            color: blue;
+            font-size: 70px;
+            font-weight: 100;
+        }
+        .sect h3{
+            color:  black;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .sect h5{
+            color:  black;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        input{
+            width: 500px;
+            height: 50px;
+            background-color: #ffffff;
+            color: black;
+            border: none;
+        }
+        .img2{
+            /* margin-right: 50px; */
+            width: 500px;
+        }
+        #pictures{
+            background-color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        padding: 20px 100px;
+        }
+        #pics{
+            background-color: white;
+            
+            border-radius: 20px;
+        }
+         #pics img{
+            width: 250px;
+            height: 200px;
+        } 
+        #pics h1{
+            max-width: 200px;
+            text-align: center;
+        }
+        #pics button{
+            background-color: crimson;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 10px 10px;
+        }
+        #cart{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 50px 100px;
+        }
+        .cart {
+            padding: 50px 100px;
+        }
+        .address{
+            padding: 100px 100px;
+        }
+        .us{
+            background-color:#edf6fd;
+           
+        }
+        .us h1{
+            /* margin-top: 50px; */
+             margin-left:100px;
+        }
+        .abouts{
+            padding: 0px 50px 0px 50px;
+          /* margin-top: 100px; */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .about{
+            background-color: white;
+            color: rgb(87, 87, 209);
+            width: 400px;
+            text-align: center;
+            padding: 20px 50px;
+            border: none;
+        }
+        .tosin{
+            background-color: white;
+            color: rgb(87, 87, 209);
+            width:400px;
+            text-align: center;
+            padding: 50px 50px;
+            border: none;
+        }
+        .oluwa{
+            background-color: white;
+            color: rgb(87, 87, 209);
+            width: 400px;
+            text-align: center;
+            padding: 50px 50px;
+            border: none;
+        }
+        .you{
+            background-color:white;
+        }
+        .us h1{
+            margin-left: 100px;
+        }
+        .abouts{
+            padding: 50px 50px 100px 50px;
+          margin-top: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .about{
+            background-color: white;
+            color: rgb(87, 87, 209);
+            width: 400px;
+            text-align: center;
+            padding: 20px 50px;
+            border: none;
+        }
+        .tosin{
+            background-color: white;
+            color: rgb(87, 87, 209);
+            width:400px;
+            text-align: center;
+            padding: 20px 50px;
+            border: none;
+        }
+        .oluwa{
+            background-color: white;
+            color: rgb(87, 87, 209);
+            width: 400px;
+            text-align: center;
+            padding: 20px 50px;
+            border: none;
+        }
+         .techs{
+            background-color: #f7f6f4;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            padding: 50px 100px;
+       
+        }
+        .tech p{
+            text-decoration: underline;
+        }
+        .foot{
+            background-color: #384a62;
+             display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 100px 100px;
+        }
+        .foots{
+            color: white;
+        }
+        .face img{
+            max-width: 200px;
+        }
+        footer{
+            background-color: #cbcac8;
+            text-align: center;
+            align-items: center;
+            height: 70px;
+            padding-top: 30px;
+        }
+        </style>
+</head>
+<body>
+    <nav class="nav1">
+        <img src="./images/download (18).svg" alt="">
+        <ul>
+            <li>All products</li>
+            <li>Become a Reseller</li>
+            <li>Match Store</li>
+            <li>Marketplace</li>
+        </ul>
+        <button class="btn1">Sign In</button>
+        <ul>
+            <li>Create account</li>
+        </ul>
+    </nav>
+    <section class="sections">
+      <div class="sect">
+        <h1 class="h1">Quality Prints</h1>
+        <h3 class="h3">Shipped to your doorsteps</h3>
+        <h5 class="h5">What would you like to prints today</h5>
+        <input type="text" placeholder="Search for Business cards, T-shirts,Mugs e.t.c">
+      </div>
+        <img src="./images/Card3_n9kqin.png"  class="img2">
+    </section>
+    <h1 class="cart">POPULAR PRODUCTS</h1>
+    <div id="pictures">
+        
+        <div id="pics">
+            <img src="./images/1440201227_two-sided-business-cards-by-printivo.png" alt="">
+            <h2>Two Sided Business Cards</h2>
+            <p>STARTING AT</p>
+            <p>#15100 per 100</p>
+            <button>Browse Landscape</button>
+        </div>
+        <div id="pics">
+            <img src="./images/1572522725_flyer-1sided.png" alt="">
+            <h2>A5 flyers (single sided)</h2>
+            <p>STARTING AT</p>
+            <p>#25800 per 100</p>
+            <button>Browse Landscape</button>
+        </div>
+        <div id="pics">
+            <img src="./images/1656003107_social-media--15.png" alt="">
+            <h2>Round Stickers (3.5" Diameter)</h2>
+            <p>STARTING AT</p>
+            <p>#17000 per 100</p>
+            <button>Browse Landscape</button>
+        </div>
+        <div id="pics">
+            <img src="./images/1473159158_Christmas-card-for-this-wonderful-season.png" alt="">
+            <h2>Smile Mugs</h2>
+            <p>STARTING AT</p>
+            <p> 4800 per 1</p>
+            <button>Browse Landscape</button>
+        </div>
+        <div id="pics">
+            <img src="./images/1439790190_postcard.jpg" alt="">
+            <h2>Postcars (A6)</h2>
+            <p>STARTING AT</p>
+            <p>#22300 per 50</p>
+            <button>Browse Landscape</button>
+        </div>
+        <div id="pics">
+            <img src="./images/1446183154_big rollup banner.png" alt="">
+            <h2>Roll up banners(Big Base)</h2>
+            <p>STARTING AT</p>
+            <p>#65500 per 1</p>
+            <button>Browse Landscape</button>
+        </div>
+        <div id="pics">
+            <img src="./images/1572259118_product-5-(1).png" alt="">
+            <h2>A2 Posters</h2>
+            <p>STARTING AT</p>
+            <p>#71100 per 100</p>
+            <button>Browse Landscape</button>
+           
+        </div>
+        <div id="pics">
+            <img src="./images/1473167305_trifold-brochure-printing.png" alt="">
+            <h2>Trifold Brochures</h2>
+            <p>STARTING AT</p>
+            <p>#47500 per 100</p>
+            <button>Browse Landscape</button>
+            
+        </div>
+        <div id="pics">
+            <img src="./images/1456215784_12.png" alt="">
+            <h2> Land scape ID CArd</h2>
+            <p>STARTING AT</p>
+            <p>#4500 per 1</p>
+            <button>Browse Landscape</button>
+        </div>
+        <div id="pics">
+            <img src="./images/1485151940_White-tshirt.png" alt="">
+            <h2> Off White T-shirs</h2>
+            <p>STARTING AT</p>
+            <p>#6000 per 1</p>
+            <button>Browse Landscape</button>
+        </div>
+        <div id="pics">
+            <img src="./images/1572258123_product-3-(1).png" alt="">
+            <h2> A4 Branded Paper Bags</h2>
+            <p>STARTING AT</p>
+            <p>#115280 per 100</p>
+            <button>Browse Landscape</button>
+        </div>
+        <div id="pics">
+            <img src="./images/1607424257_63f28e7a-da1d-4685-a297-964e186a2170.jpeg" alt="">
+            <h2>A4 Courier Bags</h2>
+            <p>STARTING AT</p>
+            <p>#27500 per 100</p>
+            <button>Browse Landscape</button>
+        </div>
+       
+    </div>
+    <h1 class="cart">POPULAR CATEGORIES</h1>
+    <div id="cart">
+        <div id="pics">
+            <img src="./images/1473159158_Christmas-card-for-this-wonderful-season.png" alt="">
+            <h2>Greetings Cards</h2>
+            <p>STARTING AT</p>
+            <p>#29800 per 50</p>
+            <button>Browse Landscape</button>
+        </div>
+        <div id="pics">
+            <img src="./images/1473165427_stickers.png" alt="">
+            <h2></h2>Stickers</h2>
+            <p>STARTING AT</p>
+            <p>#5400 per 75</p>
+            <button>Browse Landscape</button>
+        </div>
+    </div>
+    <div class="address">
+        <h2>Nigeria’s No. 1 online print shop 👑</h2>
+        <h3>Our print services and solutions are trusted by these brands and over 15,000 other businesses in Nigeria.  </h3>
+        <img src="./images/Group_61_h8vxko.png" alt="">
+      
+    </div>
+   <main class="us">
+    <h1>What Customers Say About Us 🙌🏾</h1>
+    <div class="abouts">
+        <div class="about">
+            Amina Ebele @DeliciousAmina
+            I am now the unofficial @Printivo ambassador. What these guys just pulled to ensure I got my menu cards today is stunning!</div>
+            <div class="tosin">Oluwatosin @tosingirlfx
+                @Printivo delivered my mugs in 24hrs. Thank you so much! It's nice doing business with you. More to come.</div>
+                <div class="oluwa">Oluwatosin @olgablark
+                    These guys @Printivo are really awesome and affordable. Excellent customer service and delivery too. Thank you.</div>
+                    </div>
+    </main>
+    <main class="you">
+        <h1>You can count on us for:</h1>
+        <div class="abouts">
+            <div class="about">
+            
+Fast Turnaround Within Days
+Your order gets to you within 3-7 working days via DHL or our very own Printivo Direct.
+            </div>
+                <div class="tosin">100% Top Quality
+                    Only the finest materials, machines and people will be involved in fulfilling your order.
+                    </div>
+                    <div class="oluwa">
+                        Affordable Services
+                        All products are adequately priced to ensure you get value for your money at all times.</div>
+                        </div>
+        </main>
+        <div class="techs">
+            <div class="tech">
+                <img src="./images/download (10).svg" alt="">
+                <p>Read the article here</p>
+            </div>
+             <div class="tech">
+                <img src="./images/download (11).svg" alt="">
+                <p>Read the article here</p>
+            </div>
+             <div class="tech">
+                <img src="./images/Techpoint_Logo_ucyvgg.png" alt="">
+                <p>Read the article here</p>
+            </div>
+             <div class="tech">
+                <img src="./images/download (12).svg" alt="">
+                <p>Read the article here</p>
+            </div>
+             <div class="tech">
+                <img src="./images/download (13).svg" alt="">
+                <p>Read the article here</p>
+            </div>
+ </div>
+ <section class="foot">
+    <div class="foots">
+        <h2>Printivo</h2> <br>
+        <p>Contact us</p> <br>
+        <p>Track Order</p> <br>
+        <p>PrintivoPromise</p> <br>
+        <p>Printivo Blog</p> <br>
+        <p>Career</p>
+    </div>
+    <div class="foots">
+        <h2>Help and Information</h2> <br>
+        <p>Paper Quality</p> <br>
+        <p>Privacy Policy</p> <br>
+        <p>Terms and Condition</p> <br>
+        <p>Fonts Licences</p> <br>
+        <p>Shipping and Delivery</p>
+        
+    </div>
+    <div class="foots">
+        <h2>Make Money</h2> <br>
+        <p>Refer a friend & earn N1,000</p> <br>
+        <p>Become a Reseller</p> <br>
+        <p>Sell your Designs</p> <br>
+        <p>Merch Store</p> 
+    </div>
+    <div class="foots">
+        <h2>Follow us</h2> <br>
+        <div class="face">
+            <img src="./images/download (14).svg" alt="">
+            <img src="./images/download (15).svg" alt="">
+            <img src="./images/download (16).svg" alt="">
+            <img src="./images/download (17).svg" alt="">
+        </div> <br>
+        <h2>Accepted Payments</h2> <br>
+        <div class="face">
+            <img src="./images/payment.png" alt="">
+        </div> <br>
+        <h2>Delivery</h2> <br>
+        <div class="face">
+            <img src="./images/shipping.png" alt="">
+        </div>
+    </div>
+ </section>
+ <footer>
+    <p>Copyright © 2023 Printivo. All rights reserved.</p>
+ </footer>
+</body>
+</html>
